@@ -3,11 +3,13 @@ package com.tribalpaw.api.model.country;
 import com.tribalpaw.api.model.army.Army;
 import com.tribalpaw.api.model.province.Province;
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.ArrayList;
 
+@Builder
 @Getter
 @Setter
 @Entity

@@ -11,5 +11,6 @@ public record CountryRequestDto(
         String name,
 
         ArrayList<Province> provinces,
+
         ArrayList<Army> armies
 ) {}
