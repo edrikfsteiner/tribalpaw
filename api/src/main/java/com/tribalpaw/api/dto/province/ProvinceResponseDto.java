@@ -9,12 +9,12 @@ public record ProvinceResponseDto(
         Long id,
         String name,
         Integer population,
-        Double pop_growth,
-        Double wood_growth,
-        Double stone_growth,
-        Double metal_growth,
-        Double gold_growth,
-        Double tech_growth,
+        Double popGrowth,
+        Double woodGrowth,
+        Double stoneGrowth,
+        Double metalGrowth,
+        Double goldGrowth,
+        Double techGrowth,
         Country country,
         ArrayList<Building> buildings
 ) {}

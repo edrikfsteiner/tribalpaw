@@ -3,11 +3,13 @@ package com.tribalpaw.api.model.province;
 import com.tribalpaw.api.model.building.Building;
 import com.tribalpaw.api.model.country.Country;
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.ArrayList;
 
+@Builder
 @Getter
 @Setter
 @Entity
@@ -19,12 +21,12 @@ public class Province {
 
     private String name;
     private Integer population;
-    private Double pop_growth;
-    private Double wood_growth;
-    private Double stone_growth;
-    private Double metal_growth;
-    private Double gold_growth;
-    private Double tech_growth;
+    private Double popGrowth;
+    private Double woodGrowth;
+    private Double stoneGrowth;
+    private Double metalGrowth;
+    private Double goldGrowth;
+    private Double techGrowth;
 
     @ManyToOne
     @JoinColumn(name = "country_id")
@@ -37,23 +39,25 @@ public class Province {
             Long id,
             String name,
             Integer population,
-            Double pop_growth,
-            Double wood_growth,
-            Double stone_growth,
-            Double metal_growth,
-            Double gold_growth,
-            Double tech_growth,
-            Country country
+            Double popGrowth,
+            Double woodGrowth,
+            Double stoneGrowth,
+            Double metalGrowth,
+            Double goldGrowth,
+            Double techGrowth,
+            Country country,
+            ArrayList<Building> buildings
     ) {
         this.id = id;
         this.name = name;
         this.population = population;
-        this.pop_growth = pop_growth;
-        this.wood_growth = wood_growth;
-        this.stone_growth = stone_growth;
-        this.metal_growth = metal_growth;
-        this.gold_growth = gold_growth;
-        this.tech_growth = tech_growth;
+        this.popGrowth = popGrowth;
+        this.woodGrowth = woodGrowth;
+        this.stoneGrowth = stoneGrowth;
+        this.metalGrowth = metalGrowth;
+        this.goldGrowth = goldGrowth;
+        this.techGrowth = techGrowth;
         this.country = country;
+        this.buildings = buildings;
     }
 }
