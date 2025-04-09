@@ -7,12 +7,12 @@ import com.tribalpaw.api.model.building.product.*;
 public class BuildingFactory {
     public Building construct(BuildingType building) {
         return switch (building) {
-            case GOLDMINE -> new GoldMine();
-            case LUMBER -> new Lumber();
-            case MINE -> new Mine();
-            case QUARRY -> new Quarry();
-            case RESIDENCE -> new Residence();
-            case UNIVERSITY -> new University();
+            case GOLDMINE -> new GoldMine(null, "Gold mine", 1, 1.0, null);
+            case LUMBER -> new Lumber(null, "Lumber", 1, 1.0, null);
+            case MINE -> new Mine(null, "Mine", 1, 1.0, null);
+            case QUARRY -> new Quarry(null, "Quarry", 1, 1.0, null);
+            case RESIDENCE -> new Residence(null, "Residence", 1, 1.0, null);
+            case UNIVERSITY -> new University(null, "University", 1, 1.0, null);
         };
     }
 }

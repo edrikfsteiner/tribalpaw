@@ -2,26 +2,39 @@ package com.tribalpaw.api.model.building;
 
 import com.tribalpaw.api.model.province.Province;
 import jakarta.persistence.*;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 
+@Builder
+@Getter
+@Setter
 @Entity
 @Table(name = "buildings")
-public interface Building {
+public abstract class Building {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id = null;
+    protected Long id;
 
-    String name = null;
-    Integer level = null;
-    Double pop_growth = null;
-    Double wood_growth = null;
-    Double stone_growth = null;
-    Double metal_growth = null;
-    Double gold_growth = null;
-    Double tech_growth = null;
+    protected String name;
+    protected Integer level;
+    protected Double resourceGrowth;
 
     @ManyToOne
     @JoinColumn(name = "province_id")
-    Province province = null;
+    protected Province province;
 
-    Integer levelUp();
+    public Building(Long id, String name, Integer level, Double resourceGrowth, Province province) {
+        this.id = id;
+        this.name = name;
+        this.level = level;
+        this.resourceGrowth = resourceGrowth;
+        this.province = province;
+    }
+
+    public Integer levelUp() {
+        this.level += 1;
+        this.resourceGrowth *= 2;
+        return this.level;
+    }
 }
