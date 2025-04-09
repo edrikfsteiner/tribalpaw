@@ -1,7 +1,7 @@
-package com.tribalpaw.api.dto.army.division;
+package com.tribalpaw.api.dto.division;
 
 import com.tribalpaw.api.model.army.Army;
-import com.tribalpaw.api.model.army.division.DivisionType;
+import com.tribalpaw.api.model.division.DivisionType;
 
 public record DivisionResponseDto(
         Long id,

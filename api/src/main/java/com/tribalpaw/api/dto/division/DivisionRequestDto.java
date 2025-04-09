@@ -1,11 +1,13 @@
-package com.tribalpaw.api.dto.army.division;
+package com.tribalpaw.api.dto.division;
 
 import com.tribalpaw.api.model.army.Army;
-import com.tribalpaw.api.model.army.division.DivisionType;
+import com.tribalpaw.api.model.division.DivisionType;
 import jakarta.validation.constraints.NotEmpty;
 
 public record DivisionRequestDto(
+        @NotEmpty(message = "Invalid division type")
         DivisionType type,
+
         Integer level,
         Double organization,
         Double damage,

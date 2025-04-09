@@ -1,4 +1,4 @@
-package com.tribalpaw.api.model.army.division;
+package com.tribalpaw.api.model.division;
 
 import com.tribalpaw.api.model.army.Army;
 import jakarta.persistence.*;
@@ -15,7 +15,7 @@ public class Division {
     private Long id;
 
     private DivisionType type;
-    private Integer level = 1;
+    private Integer level;
     private Double organization;
     private Double damage;
     private Double defense;
