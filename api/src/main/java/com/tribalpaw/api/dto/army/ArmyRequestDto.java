@@ -8,6 +8,9 @@ import jakarta.validation.constraints.NotEmpty;
 import java.util.ArrayList;
 
 public record ArmyRequestDto(
+        @NotEmpty(message = "Invalid id")
+        Long id,
+
         @NotBlank(message = "Invalid name")
         String name,
 

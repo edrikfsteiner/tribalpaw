@@ -8,6 +8,9 @@ import jakarta.validation.constraints.NotEmpty;
 import java.util.ArrayList;
 
 public record ProvinceRequestDto(
+        @NotEmpty(message = "Invalid id")
+        Long id,
+
         @NotBlank(message = "Invalid name")
         String name,
 
