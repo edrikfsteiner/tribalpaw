@@ -42,7 +42,7 @@ public class ArmyController {
     }
 
     @PostMapping
-    public ResponseEntity<?> add(@RequestBody ArmyRequestDto army) {
+    public ResponseEntity<?> post(@RequestBody ArmyRequestDto army) {
         try {
             return ResponseEntity.ok(service.post(army));
         } catch (BadRequestException ex) {
@@ -53,7 +53,7 @@ public class ArmyController {
     }
 
     @PutMapping
-    public ResponseEntity<?> edit(@RequestBody ArmyRequestDto army) {
+    public ResponseEntity<?> put(@RequestBody ArmyRequestDto army) {
         try {
             return ResponseEntity.ok(service.put(army));
         } catch (BadRequestException ex) {

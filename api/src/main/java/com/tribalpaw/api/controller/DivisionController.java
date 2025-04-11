@@ -42,7 +42,7 @@ public class DivisionController {
     }
 
     @PostMapping
-    public ResponseEntity<?> add(@RequestBody DivisionRequestDto division) {
+    public ResponseEntity<?> post(@RequestBody DivisionRequestDto division) {
         try {
             return ResponseEntity.ok(service.post(division));
         } catch (BadRequestException ex) {
@@ -53,7 +53,7 @@ public class DivisionController {
     }
 
     @PutMapping
-    public ResponseEntity<?> edit(@RequestBody DivisionRequestDto division) {
+    public ResponseEntity<?> put(@RequestBody DivisionRequestDto division) {
         try {
             return ResponseEntity.ok(service.put(division));
         } catch (BadRequestException ex) {

@@ -42,7 +42,7 @@ public class ProvinceController {
     }
 
     @PostMapping
-    public ResponseEntity<?> add(@RequestBody ProvinceRequestDto province) {
+    public ResponseEntity<?> post(@RequestBody ProvinceRequestDto province) {
         try {
             return ResponseEntity.ok(service.post(province));
         } catch (BadRequestException ex) {
@@ -53,7 +53,7 @@ public class ProvinceController {
     }
 
     @PutMapping
-    public ResponseEntity<?> edit(@RequestBody ProvinceRequestDto province) {
+    public ResponseEntity<?> put(@RequestBody ProvinceRequestDto province) {
         try {
             return ResponseEntity.ok(service.put(province));
         } catch (BadRequestException ex) {

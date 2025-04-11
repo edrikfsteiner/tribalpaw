@@ -42,7 +42,7 @@ public class BuildingController {
     }
 
     @PostMapping
-    public ResponseEntity<?> add(@RequestBody BuildingRequestDto building) {
+    public ResponseEntity<?> post(@RequestBody BuildingRequestDto building) {
         try {
             return ResponseEntity.ok(service.post(building));
         } catch (BadRequestException ex) {
@@ -53,7 +53,7 @@ public class BuildingController {
     }
 
     @PutMapping
-    public ResponseEntity<?> edit(@RequestBody BuildingRequestDto building) {
+    public ResponseEntity<?> put(@RequestBody BuildingRequestDto building) {
         try {
             return ResponseEntity.ok(service.put(building));
         } catch (BadRequestException ex) {

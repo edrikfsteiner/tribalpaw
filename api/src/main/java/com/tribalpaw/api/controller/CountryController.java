@@ -42,7 +42,7 @@ public class CountryController {
     }
 
     @PostMapping
-    public ResponseEntity<?> add(@RequestBody CountryRequestDto country) {
+    public ResponseEntity<?> post(@RequestBody CountryRequestDto country) {
         try {
             return ResponseEntity.ok(service.post(country));
         } catch (BadRequestException ex) {
@@ -53,7 +53,7 @@ public class CountryController {
     }
 
     @PutMapping
-    public ResponseEntity<?> edit(@RequestBody CountryRequestDto country) {
+    public ResponseEntity<?> put(@RequestBody CountryRequestDto country) {
         try {
             return ResponseEntity.ok(service.put(country));
         } catch (BadRequestException ex) {
