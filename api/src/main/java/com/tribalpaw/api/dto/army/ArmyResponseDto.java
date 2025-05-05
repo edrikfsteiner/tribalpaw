@@ -1,13 +1,13 @@
 package com.tribalpaw.api.dto.army;
 
-import com.tribalpaw.api.model.division.Division;
-import com.tribalpaw.api.model.country.Country;
+import com.tribalpaw.api.dto.country.CountryResponseDto;
+import com.tribalpaw.api.dto.division.DivisionResponseDto;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public record ArmyResponseDto(
         Long id,
         String name,
-        Country country,
-        ArrayList<Division> divisions
+        CountryResponseDto country,
+        List<DivisionResponseDto> divisions
 ) {}

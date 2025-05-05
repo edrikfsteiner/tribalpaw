@@ -7,7 +7,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.ArrayList;
+import java.util.List;
 
 @Builder
 @Getter
@@ -26,9 +26,9 @@ public class Army {
     private Country country;
 
     @OneToMany(mappedBy = "army", cascade = CascadeType.ALL)
-    private ArrayList<Division> divisions;
+    private List<Division> divisions;
 
-    public Army(Long id, String name, Country country, ArrayList<Division> divisions) {
+    public Army(Long id, String name, Country country, List<Division> divisions) {
         this.id = id;
         this.name = name;
         this.country = country;
