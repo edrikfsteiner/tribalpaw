@@ -2,6 +2,10 @@ package com.tribalpaw.api.util;
 
 import com.tribalpaw.api.dto.army.ArmyRequestDto;
 import com.tribalpaw.api.dto.army.ArmyResponseDto;
+import com.tribalpaw.api.dto.country.CountryRequestDto;
+import com.tribalpaw.api.dto.country.CountryResponseDto;
+import com.tribalpaw.api.dto.division.DivisionRequestDto;
+import com.tribalpaw.api.dto.division.DivisionResponseDto;
 import com.tribalpaw.api.model.army.Army;
 import com.tribalpaw.api.model.country.Country;
 import com.tribalpaw.api.model.division.Division;
@@ -11,10 +15,10 @@ import java.util.List;
 public class ArmyCreator {
     private static final Country country = CountryCreator.createCountry();
     private static final List<Division> divisions = DivisionCreator.createDivisions();
-    private static final Country countryRequestDto = CountryCreator.createCountryRequestDto();
-    private static final List<Division> divisionsRequestDto = DivisionCreator.createDivisionsRequestDto();
-    private static final Country countryResponseDto = CountryCreator.createCountryResponseDto();
-    private static final List<Division> divisionsResponseDto = DivisionCreator.createDivisionsResponseDto();
+    private static final CountryRequestDto countryRequestDto = CountryCreator.createCountryRequestDto();
+    private static final List<DivisionRequestDto> divisionsRequestDto = DivisionCreator.createDivisionsRequestDto();
+    private static final CountryResponseDto countryResponseDto = CountryCreator.createCountryResponseDto();
+    private static final List<DivisionResponseDto> divisionsResponseDto = DivisionCreator.createDivisionsResponseDto();
 
     public static Army createArmy() {
         return Army.builder()
