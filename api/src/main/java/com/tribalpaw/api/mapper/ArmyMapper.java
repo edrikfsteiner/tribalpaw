@@ -19,6 +19,10 @@ public class ArmyMapper {
                 .build();
     }
 
+    public static List<ArmyResponseDto> toListDto(List<Army> dto) {
+        return dto.stream().map(ArmyMapper::toDto).toList();
+    }
+
     public static ArmyResponseDto toDto(Army model) {
         return new ArmyResponseDto(
                 model.getId(),

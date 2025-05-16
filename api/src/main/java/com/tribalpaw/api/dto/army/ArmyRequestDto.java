@@ -17,6 +17,5 @@ public record ArmyRequestDto(
         @NotEmpty(message = "Invalid country")
         CountryRequestDto country,
 
-        @NotEmpty(message = "Invalid divisions")
         List<DivisionRequestDto> divisions
 ) {}

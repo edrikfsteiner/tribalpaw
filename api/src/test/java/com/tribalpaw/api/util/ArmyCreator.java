@@ -29,6 +29,17 @@ public class ArmyCreator {
                 .build();
     }
 
+    public static List<Army> createArmies() {
+        return List.of(
+                Army.builder()
+                        .id(1L)
+                        .name("Army")
+                        .country(country)
+                        .divisions(divisions)
+                        .build()
+        );
+    }
+
     public static ArmyRequestDto createArmyRequestDto() {
         return new ArmyRequestDto(
                 1L,
@@ -38,12 +49,34 @@ public class ArmyCreator {
         );
     }
 
+    public static List<ArmyRequestDto> createArmiesRequestDto() {
+        return List.of(
+                new ArmyRequestDto(
+                        1L,
+                        "Army",
+                        countryRequestDto,
+                        divisionsRequestDto
+                )
+        );
+    }
+
     public static ArmyResponseDto createArmyResponseDto() {
         return new ArmyResponseDto(
                 1L,
                 "Army",
                 countryResponseDto,
                 divisionsResponseDto
+        );
+    }
+
+    public static List<ArmyResponseDto> createArmiesResponseDto() {
+        return List.of(
+                new ArmyResponseDto(
+                        1L,
+                        "Army",
+                        countryResponseDto,
+                        divisionsResponseDto
+                )
         );
     }
 }
