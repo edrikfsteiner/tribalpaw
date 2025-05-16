@@ -1,9 +1,9 @@
 package com.tribalpaw.api.dto.country;
 
-import com.tribalpaw.api.model.army.Army;
-import com.tribalpaw.api.model.province.Province;
+import com.tribalpaw.api.dto.army.ArmyResponseDto;
+import com.tribalpaw.api.dto.province.ProvinceResponseDto;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public record CountryResponseDto(
         Long id,
@@ -14,6 +14,6 @@ public record CountryResponseDto(
         Double metal,
         Double gold,
         Double tech,
-        ArrayList<Province> provinces,
-        ArrayList<Army> armies
+        List<ProvinceResponseDto> provinces,
+        List<ArmyResponseDto> armies
 ) {}

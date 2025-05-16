@@ -1,11 +1,11 @@
 package com.tribalpaw.api.dto.country;
 
-import com.tribalpaw.api.model.army.Army;
-import com.tribalpaw.api.model.province.Province;
+import com.tribalpaw.api.dto.army.ArmyRequestDto;
+import com.tribalpaw.api.dto.province.ProvinceRequestDto;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public record CountryRequestDto(
         @NotEmpty(message = "Invalid id")
@@ -14,7 +14,7 @@ public record CountryRequestDto(
         @NotBlank(message = "Invalid name")
         String name,
 
-        ArrayList<Province> provinces,
+        List<ProvinceRequestDto> provinces,
 
-        ArrayList<Army> armies
+        List<ArmyRequestDto> armies
 ) {}

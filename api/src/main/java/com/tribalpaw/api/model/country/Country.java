@@ -7,7 +7,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.ArrayList;
+import java.util.List;
 
 @Builder
 @Getter
@@ -28,10 +28,10 @@ public class Country {
     private Double tech;
 
     @OneToMany(mappedBy = "country", cascade = CascadeType.ALL)
-    private ArrayList<Province> provinces;
+    private List<Province> provinces;
 
     @OneToMany(mappedBy = "country", cascade = CascadeType.ALL)
-    private ArrayList<Army> armies;
+    private List<Army> armies;
 
     public Country(
             Long id,
@@ -42,8 +42,8 @@ public class Country {
             Double wood,
             Double metal,
             Double tech,
-            ArrayList<Province> provinces,
-            ArrayList<Army> armies
+            List<Province> provinces,
+            List<Army> armies
     ) {
         this.id = id;
         this.name = name;
