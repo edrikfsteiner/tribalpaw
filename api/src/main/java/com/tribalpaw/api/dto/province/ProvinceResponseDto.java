@@ -1,9 +1,9 @@
 package com.tribalpaw.api.dto.province;
 
-import com.tribalpaw.api.model.building.Building;
-import com.tribalpaw.api.model.country.Country;
+import com.tribalpaw.api.dto.building.BuildingResponseDto;
+import com.tribalpaw.api.dto.country.CountryResponseDto;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public record ProvinceResponseDto(
         Long id,
@@ -15,6 +15,6 @@ public record ProvinceResponseDto(
         Double metalGrowth,
         Double goldGrowth,
         Double techGrowth,
-        Country country,
-        ArrayList<Building> buildings
+        CountryResponseDto country,
+        List<BuildingResponseDto> buildings
 ) {}
