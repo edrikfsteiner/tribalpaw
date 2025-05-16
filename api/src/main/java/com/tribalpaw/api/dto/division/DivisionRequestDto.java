@@ -1,6 +1,6 @@
 package com.tribalpaw.api.dto.division;
 
-import com.tribalpaw.api.model.army.Army;
+import com.tribalpaw.api.dto.army.ArmyRequestDto;
 import com.tribalpaw.api.model.division.DivisionType;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -20,5 +20,5 @@ public record DivisionRequestDto(
         Double defense,
 
         @NotEmpty(message = "Invalid army")
-        Army army
+        ArmyRequestDto army
 ) {}

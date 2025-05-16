@@ -1,6 +1,6 @@
 package com.tribalpaw.api.dto.division;
 
-import com.tribalpaw.api.model.army.Army;
+import com.tribalpaw.api.dto.army.ArmyResponseDto;
 import com.tribalpaw.api.model.division.DivisionType;
 
 public record DivisionResponseDto(
@@ -10,5 +10,5 @@ public record DivisionResponseDto(
         Double organization,
         Double damage,
         Double defense,
-        Army army
+        ArmyResponseDto army
 ) {}

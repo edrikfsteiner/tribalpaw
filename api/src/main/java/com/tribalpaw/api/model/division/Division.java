@@ -30,6 +30,7 @@ public class Division {
         this.organization = builder.organization;
         this.damage = builder.damage;
         this.defense = builder.defense;
+        this.army = builder.army;
     }
 
     public Integer levelUp() {
