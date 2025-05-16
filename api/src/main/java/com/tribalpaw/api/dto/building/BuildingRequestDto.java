@@ -1,6 +1,6 @@
 package com.tribalpaw.api.dto.building;
 
-import com.tribalpaw.api.model.province.Province;
+import com.tribalpaw.api.dto.province.ProvinceRequestDto;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -16,5 +16,5 @@ public record BuildingRequestDto(
         Integer level,
 
         @NotEmpty(message = "Invalid province")
-        Province province
+        ProvinceRequestDto province
 ) {}
