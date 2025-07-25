@@ -3,6 +3,7 @@ package com.tribalpaw.api.model.province;
 import com.tribalpaw.api.model.building.Building;
 import com.tribalpaw.api.model.country.Country;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
@@ -12,6 +13,7 @@ import java.util.List;
 @Builder
 @Getter
 @Setter
+@AllArgsConstructor
 @Entity
 @Table(name = "provinces")
 public class Province {
@@ -20,12 +22,19 @@ public class Province {
     private Long id;
 
     private String name;
+
     private Integer population;
+
     private Double popGrowth;
+
     private Double woodGrowth;
+
     private Double stoneGrowth;
+
     private Double metalGrowth;
+
     private Double goldGrowth;
+
     private Double techGrowth;
 
     @ManyToOne
@@ -34,30 +43,4 @@ public class Province {
 
     @OneToMany(mappedBy = "province", cascade = CascadeType.ALL)
     private List<Building> buildings;
-
-    public Province(
-            Long id,
-            String name,
-            Integer population,
-            Double popGrowth,
-            Double woodGrowth,
-            Double stoneGrowth,
-            Double metalGrowth,
-            Double goldGrowth,
-            Double techGrowth,
-            Country country,
-            List<Building> buildings
-    ) {
-        this.id = id;
-        this.name = name;
-        this.population = population;
-        this.popGrowth = popGrowth;
-        this.woodGrowth = woodGrowth;
-        this.stoneGrowth = stoneGrowth;
-        this.metalGrowth = metalGrowth;
-        this.goldGrowth = goldGrowth;
-        this.techGrowth = techGrowth;
-        this.country = country;
-        this.buildings = buildings;
-    }
 }

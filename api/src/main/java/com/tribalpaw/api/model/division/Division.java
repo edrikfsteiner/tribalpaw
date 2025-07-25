@@ -15,9 +15,13 @@ public class Division {
     private Long id;
 
     private DivisionType type;
+
     private Integer level;
+
     private Double organization;
+
     private Double damage;
+
     private Double defense;
 
     @ManyToOne
@@ -27,6 +31,7 @@ public class Division {
     public Division(DivisionBuilder builder) {
         this.id = builder.id;
         this.type = builder.type;
+        this.level = builder.level;
         this.organization = builder.organization;
         this.damage = builder.damage;
         this.defense = builder.defense;

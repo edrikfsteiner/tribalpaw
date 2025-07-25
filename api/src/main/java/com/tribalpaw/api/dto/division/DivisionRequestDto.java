@@ -16,7 +16,9 @@ public record DivisionRequestDto(
         Integer level,
 
         Double organization,
+
         Double damage,
+
         Double defense,
 
         @NotEmpty(message = "Invalid army")
