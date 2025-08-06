@@ -42,7 +42,7 @@ public class BuildingService {
     @Transactional
     public BuildingResponseDto put(BuildingRequestDto dto) {
         Optional<Building> building = repository.findById(dto.id());
-        Optional<Building> province = repository.findById(dto.province().getId());
+        Optional<Building> province = repository.findById(dto.province().id());
 
         if (building.isEmpty()) {
             throw new NotFoundException("Building not found");

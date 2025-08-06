@@ -42,7 +42,7 @@ public class ProvinceService {
     @Transactional
     public ProvinceResponseDto put(ProvinceRequestDto dto) {
         Optional<Province> province = repository.findById(dto.id());
-        Optional<Province> country = repository.findById(dto.country().getId());
+        Optional<Province> country = repository.findById(dto.country().id());
 
         if (province.isEmpty()) {
             throw new NotFoundException("Province not found");

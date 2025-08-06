@@ -42,7 +42,7 @@ public class ArmyService {
     @Transactional
     public ArmyResponseDto put(ArmyRequestDto dto) {
         Optional<Army> army = repository.findById(dto.id());
-        Optional<Army> country = repository.findById(dto.country().getId());
+        Optional<Army> country = repository.findById(dto.country().id());
 
         if (army.isEmpty()) {
             throw new NotFoundException("Army not found");

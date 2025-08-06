@@ -42,7 +42,7 @@ public class DivisionService {
     @Transactional
     public DivisionResponseDto put(DivisionRequestDto dto) {
         Optional<Division> division = repository.findById(dto.id());
-        Optional<Division> army = repository.findById(dto.army().getId());
+        Optional<Division> army = repository.findById(dto.army().id());
 
         if (division.isEmpty()) {
             throw new NotFoundException("Division not found");
