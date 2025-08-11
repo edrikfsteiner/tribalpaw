@@ -1,13 +1,13 @@
 package com.tribalpaw.api.util;
 
-import com.tribalpaw.api.dto.division.DivisionRequestDto;
-import com.tribalpaw.api.dto.division.DivisionResponseDto;
-import com.tribalpaw.api.dto.army.ArmyRequestDto;
-import com.tribalpaw.api.dto.army.ArmyResponseDto;
-import com.tribalpaw.api.model.division.Division;
-import com.tribalpaw.api.model.army.Army;
-import com.tribalpaw.api.model.division.DivisionBuilder;
-import com.tribalpaw.api.model.division.DivisionType;
+import com.tribalpaw.api.division.dto.DivisionRequestDto;
+import com.tribalpaw.api.division.dto.DivisionResponseDto;
+import com.tribalpaw.api.army.dto.ArmyRequestDto;
+import com.tribalpaw.api.army.dto.ArmyResponseDto;
+import com.tribalpaw.api.division.model.Division;
+import com.tribalpaw.api.army.model.Army;
+import com.tribalpaw.api.division.model.DivisionBuilder;
+import com.tribalpaw.api.division.model.DivisionType;
 
 import java.util.List;
 

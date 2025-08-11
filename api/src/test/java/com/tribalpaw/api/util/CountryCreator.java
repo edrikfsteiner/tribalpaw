@@ -1,14 +1,14 @@
 package com.tribalpaw.api.util;
 
-import com.tribalpaw.api.dto.country.CountryRequestDto;
-import com.tribalpaw.api.dto.country.CountryResponseDto;
-import com.tribalpaw.api.dto.army.ArmyRequestDto;
-import com.tribalpaw.api.dto.army.ArmyResponseDto;
-import com.tribalpaw.api.dto.province.ProvinceRequestDto;
-import com.tribalpaw.api.dto.province.ProvinceResponseDto;
-import com.tribalpaw.api.model.country.Country;
-import com.tribalpaw.api.model.army.Army;
-import com.tribalpaw.api.model.province.Province;
+import com.tribalpaw.api.country.dto.CountryRequestDto;
+import com.tribalpaw.api.country.dto.CountryResponseDto;
+import com.tribalpaw.api.army.dto.ArmyRequestDto;
+import com.tribalpaw.api.army.dto.ArmyResponseDto;
+import com.tribalpaw.api.province.dto.ProvinceRequestDto;
+import com.tribalpaw.api.province.dto.ProvinceResponseDto;
+import com.tribalpaw.api.country.model.Country;
+import com.tribalpaw.api.army.model.Army;
+import com.tribalpaw.api.province.model.Province;
 
 import java.util.List;
 
