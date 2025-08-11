@@ -3,7 +3,6 @@ package com.tribalpaw.api.building.model.factory;
 import com.tribalpaw.api.building.model.Building;
 import com.tribalpaw.api.building.model.BuildingType;
 import com.tribalpaw.api.building.model.product.*;
-import com.tribalpaw.api.model.building.product.*;
 
 public class BuildingFactory {
     public Building construct(BuildingType building) {
