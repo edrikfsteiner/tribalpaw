@@ -19,7 +19,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Entity
 @Table(name = "buildings")
-public abstract class Building {
+public class Building {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Long id;
